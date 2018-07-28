@@ -1,0 +1,35 @@
+sudo apt-get update
+sudo apt-get upgrade		
+sudo apt-get remove apache2
+sudo apt-get install lighttpd
+ hostname -I
+ sudo reboot
+sudo pip install --upgrade RPi.GPIO
+sudo nano /etc/dhcpcd.conf
+     
+     add this line
+          
+	interface eth0
+
+	static ip_address.19/24
+	static routers=192.168.1.1
+	static domain_name_servers=192.168.1.1
+	
+	interface wlan0
+
+	static ip_address=192.168.1.20/24
+	static routers=192.168.1.1
+	static domain_name_servers=192.168.1.1
+
+	interface wlx40a5ef413c5f
+
+	static ip_address=192.168.1.20/24
+	static routers=192.168.1.1
+	static domain_name_servers=192.168.1.1
+
+
+	
+
+sudo rm -r /var/www/* //to remove file in the folder
+sudo cp -r ~/folder to copy /var/www/html
+
